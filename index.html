@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вариант 1 - Каталог</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Подключаем шрифт Inter для схожести с макетом -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="header-left">
+            <img src="images/star.png" alt="Логотип" class="logo-icon">
+            <span class="logo-text">Вариант 1</span>
+        </div>
+        <nav class="header-nav">
+            <a href="#">Верхняя одежда</a>
+            <a href="#">Брюки</a>
+            <a href="#">Аксессуары</a>
+        </nav>
+        <div class="header-right">
+            <a href="#" class="icon-link">
+                <!-- SVG иконка профиля -->
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </a>
+            <a href="#" class="icon-link">
+                <!-- SVG иконка корзины -->
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Панель фильтров -->
+        <!-- Панель фильтров -->
+<div class="filter-bar">
+    
+    <!-- Левая часть: Фильтры -->
+    <div class="dropdown-wrapper">
+        <button class="filter-btn" id="filterBtn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line></svg>
+            Фильтры
+        </button>
+        
+        <!-- Выпадающее меню фильтров -->
+        <div class="dropdown-menu filter-menu" id="filterDropdown">
+            <label class="filter-option">
+                <input type="checkbox" checked>
+                <span>Акне Студия</span>
+            </label>
+            <label class="filter-option hover-effect"> <!-- Класс hover-effect для демонстрации как на скрине -->
+                <input type="checkbox">
+                <span>АМИ Париж</span>
+            </label>
+            <label class="filter-option">
+                <input type="checkbox">
+                <span>Вквадрате2</span>
+            </label>
+            <label class="filter-option">
+                <input type="checkbox">
+                <span>Каменный остров</span>
+            </label>
+        </div>
+    </div>
+
+    <!-- Правая часть: Сортировка -->
+    <div class="dropdown-wrapper">
+        <div class="sort-dropdown" id="sortBtn">
+            По умолчанию
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+
+        <!-- Выпадающее меню сортировки -->
+        <div class="dropdown-menu sort-menu" id="sortDropdown">
+            <div class="sort-option">По умолчанию</div>
+            <div class="sort-option hover-effect">Сначала доступные</div>
+            <div class="sort-option">Сначала догорие</div>
+        </div>
+    </div>
+</div>
+
+        <!-- Сетка товаров -->
+        <div class="product-grid">
+
+            <!-- Товар 1: Каменный остров (Stone Island) -->
+            <div class="product-card">
+                <div class="image-wrapper">
+                    <img src="images/si1.png" alt="main" class="img-slide main-img">
+                    <img src="images/si2.png" alt="slide" class="img-slide hover-img delay-1">
+                    <img src="images/si3.png" alt="slide" class="img-slide hover-img delay-2">
+                    <img src="images/si4.png" alt="slide" class="img-slide hover-img delay-3">
+                    
+                    <!-- Описание при наведении -->
+                    <div class="hover-info">
+                        <h3>Каменный остров</h3>
+                        <p>Инновации и функциональность находятся в приоритете у Каменного острова, о чем свидетельствует этот жилет.</p>
+                    </div>
+                </div>
+                <div class="product-details">
+                    <div class="price">30 000 руб</div>
+                    <div class="brand">Бренд <span>Каменный остров</span></div>
+                    <div class="name">Жилет с нашивкой компасом</div>
+                </div>
+            </div>
+
+            <!-- Товар 2: АМИ Париж (AMI) -->
+            <div class="product-card">
+                <div class="image-wrapper">
+                    <img src="images/am1.png" alt="main" class="img-slide main-img">
+                    <img src="images/am2.png" alt="slide" class="img-slide hover-img delay-1">
+                    <img src="images/am3.png" alt="slide" class="img-slide hover-img delay-2">
+                    <img src="images/am4.png" alt="slide" class="img-slide hover-img delay-3">
+
+                    <div class="hover-info">
+                        <h3>АМИ Париж</h3>
+                        <p>В этой модели АМИ Париж представляет смелый взгляд на классический силуэт рубашки.</p>
+                    </div>
+                </div>
+                <div class="product-details">
+                    <div class="price">18 800 руб</div>
+                    <div class="brand">Бренд <span>АМИ Париж</span></div>
+                    <div class="name">Полосатая рубашка с коротким рукавом</div>
+                </div>
+            </div>
+
+            <!-- Товар 3: Вквадрате2 (Dsquared2 / Брюки) -->
+            <div class="product-card">
+                <div class="image-wrapper">
+                    <img src="images/v1.png" alt="main" class="img-slide main-img">
+                    <img src="images/v2.png" alt="slide" class="img-slide hover-img delay-1">
+                    <img src="images/v3.png" alt="slide" class="img-slide hover-img delay-2">
+                    <img src="images/v4.png" alt="slide" class="img-slide hover-img delay-3">
+
+                    <div class="hover-info">
+                        <h3>Вквадрате2</h3>
+                        <p>Сделано в Италии.</p>
+                    </div>
+                </div>
+                <div class="product-details">
+                    <div class="price">47 300 руб</div>
+                    <div class="brand">Бренд <span>Вквадрате2</span></div>
+                    <div class="name">Укороченные брюки с вышитым логотипом</div>
+                </div>
+            </div>
+
+            <!-- Товар 4: Акне Студия (Acne Studios) -->
+            <div class="product-card">
+                <div class="image-wrapper">
+                    <img src="images/as1.png" alt="main" class="img-slide main-img">
+                    <img src="images/as2.png" alt="slide" class="img-slide hover-img delay-1">
+                    <img src="images/as3.png" alt="slide" class="img-slide hover-img delay-2">
+                    <img src="images/as4.png" alt="slide" class="img-slide hover-img delay-3">
+
+                    <div class="hover-info">
+                        <h3>Акне Студия</h3>
+                        <p>Лацканы из светло-серой шерсти в вертикальную полоску.</p>
+                    </div>
+                </div>
+                <div class="product-details">
+                    <div class="price">19 000 руб</div>
+                    <div class="brand">Бренд <span>Акне Студия</span></div>
+                    <div class="name">Полосатый двубортный блейзер</div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        © Вариант 1. Островский Константин, группа ИСПРВ-17-1
+    </footer>
+<script>
+    // Получаем элементы
+    const filterBtn = document.getElementById('filterBtn');
+    const filterDropdown = document.getElementById('filterDropdown');
+    const sortBtn = document.getElementById('sortBtn');
+    const sortDropdown = document.getElementById('sortDropdown');
+
+    // Функция переключения видимости
+    function toggleDropdown(dropdown) {
+        // Закрываем все остальные перед открытием текущего
+        document.querySelectorAll('.dropdown-menu').forEach(el => {
+            if (el !== dropdown) el.classList.remove('show');
+        });
+        dropdown.classList.toggle('show');
+    }
+
+    // Слушатели кликов на кнопки
+    filterBtn.addEventListener('click', (e) => {
+        e.stopPropagation(); // Чтобы клик не ушел в document
+        toggleDropdown(filterDropdown);
+    });
+
+    sortBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleDropdown(sortDropdown);
+    });
+
+    // Закрытие меню при клике в любом месте страницы
+    document.addEventListener('click', (e) => {
+        // Если клик не по меню - закрываем всё
+        if (!e.target.closest('.dropdown-menu')) {
+            document.querySelectorAll('.dropdown-menu').forEach(el => {
+                el.classList.remove('show');
+            });
+        }
+    });
+</script>
+</body>
+</html>
